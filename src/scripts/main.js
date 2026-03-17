@@ -364,39 +364,38 @@ people.forEach((person) => {
   const century = Math.ceil(person.died / 100);
 
   const row = document.createElement('tr');
-  let cell = document.createElement('td');
+  const cellName = document.createElement('td');
 
-  cell.textContent = person.name;
-  row.append(cell);
-  table.append(row);
+  cellName.textContent = person.name;
+  row.append(cellName);
 
-  cell = document.createElement('td');
+  const cellSex = document.createElement('td');
 
   if (person.sex === 'f') {
-    cell.textContent = 'Female';
+    cellSex.textContent = 'Female';
   } else {
-    cell.textContent = 'Male';
+    cellSex.textContent = 'Male';
   }
-  row.append(cell);
-  table.append(row);
+  row.append(cellSex);
 
-  cell = document.createElement('td');
-  cell.textContent = person.born;
-  row.append(cell);
-  table.append(row);
+  const cellBorn = document.createElement('td');
 
-  cell = document.createElement('td');
-  cell.textContent = person.died;
-  row.append(cell);
-  table.append(row);
+  cellBorn.textContent = person.born;
+  row.append(cellBorn);
 
-  cell = document.createElement('td');
-  cell.textContent = agePerson;
-  row.append(cell);
-  table.append(row);
+  const cellDied = document.createElement('td');
 
-  cell = document.createElement('td');
-  cell.textContent = century;
-  row.append(cell);
+  cellDied.textContent = person.died;
+  row.append(cellDied);
+
+  const cellPerson = document.createElement('td');
+
+  cellPerson.textContent = agePerson;
+  row.append(cellPerson);
+
+  const cellCentry = document.createElement('td');
+
+  cellCentry.textContent = century;
+  row.append(cellCentry);
   table.append(row);
 });
