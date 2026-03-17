@@ -357,7 +357,7 @@ const people = [
 // eslint-disable-next-line no-console
 // console.log(people); // you can remove it
 
-const table = document.querySelector('tbody');
+const table = document.querySelector('.dashboard tbody');
 
 people.forEach((person) => {
   const agePerson = person.died - person.born;
@@ -393,9 +393,9 @@ people.forEach((person) => {
   cellPerson.textContent = agePerson;
   row.append(cellPerson);
 
-  const cellCentry = document.createElement('td');
+  const cellCentury = document.createElement('td');
 
-  cellCentry.textContent = century;
-  row.append(cellCentry);
+  cellCentury.textContent = century;
+  row.append(cellCentury);
   table.append(row);
 });
